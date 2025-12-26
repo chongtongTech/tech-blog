@@ -2,8 +2,12 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "My Awesome Project",
-  description: "A VitePress Site",
+  title: "My Tech Blog",
+  description: "A personal technical blog",
+
+
+  base: '/tech-blog/', // 必须改成你的仓库名
+  
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
