@@ -44,13 +44,18 @@ export default defineConfig({
       { icon: 'github', link: 'https://github.com/chongtongTech/tech-blog' }
     ],
 
+    // 搜索功能：浏览器本地实现
     search: {
       provider: 'local'
     },
+
+    // 主页页脚
     footer: {
       // message: 'Released under the <a href="https://github.com/vuejs/vitepress/blob/main/LICENSE">MIT License</a>.',
       copyright: 'Copyright © 2019-present <a href="https://github.com/chongtongTech">chongtongTech</a>'
     },
+
+    // 文章页脚，最后更新时间
     lastUpdated: {
       text: '最后更新于',
       formatOptions: {
@@ -59,5 +64,10 @@ export default defineConfig({
       }
     },
 
+    // 文章页脚，页面编辑跳转
+    editLink: {
+      pattern: 'https://github.com/chongtongTech/tech-blog/edit/main/docs/:path',
+      text: '在 GitHub 上编辑此页面'
+    }
   }
 })
