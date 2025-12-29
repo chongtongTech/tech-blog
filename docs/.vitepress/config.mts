@@ -15,6 +15,11 @@ export default defineConfig({
       { text: 'Articles', link: '/2020-08-08' }
     ],
 
+    // 搜索功能：浏览器本地实现
+    search: {
+      provider: 'local'
+    },
+
     sidebar: [
       {
         text: '2020',
@@ -40,19 +45,26 @@ export default defineConfig({
       }
     ],
 
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/chongtongTech/tech-blog' }
-    ],
-
-    // 搜索功能：浏览器本地实现
-    search: {
-      provider: 'local'
+     // 文章页脚，页面编辑跳转
+     editLink: {
+      pattern: 'https://github.com/chongtongTech/tech-blog/edit/main/docs/:path',
+      text: '在 GitHub 上编辑此页面'
     },
 
     // 主页页脚
     footer: {
       // message: 'Released under the <a href="https://github.com/vuejs/vitepress/blob/main/LICENSE">MIT License</a>.',
       copyright: 'Copyright © 2019-present <a href="https://github.com/chongtongTech">chongtongTech</a>'
+    },
+
+     // 文章页脚
+     docFooter: {
+      prev: '上一页',
+      next: '下一页'
+    },   
+
+    outline: {
+      label: '页面导航'
     },
 
     // 文章页脚，最后更新时间
@@ -64,10 +76,25 @@ export default defineConfig({
       }
     },
 
-    // 文章页脚，页面编辑跳转
-    editLink: {
-      pattern: 'https://github.com/chongtongTech/tech-blog/edit/main/docs/:path',
-      text: '在 GitHub 上编辑此页面'
-    }
+    socialLinks: [
+      { icon: 'github', link: 'https://github.com/chongtongTech/tech-blog' }
+    ],
+
+    notFound: {
+      title: '页面未找到',
+      quote:
+        '但如果你不改变方向，并且继续寻找，你可能最终会到达你所前往的地方。',
+      linkLabel: '前往首页',
+      linkText: '带我回首页'
+    },
+
+    langMenuLabel: '多语言',
+    returnToTopLabel: '回到顶部',
+    sidebarMenuLabel: '菜单',
+    darkModeSwitchLabel: '主题',
+    lightModeSwitchTitle: '切换到浅色模式',
+    darkModeSwitchTitle: '切换到深色模式',
+    skipToContentLabel: '跳转到内容'
+
   }
 })
