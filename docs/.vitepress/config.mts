@@ -4,7 +4,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "My Tech Blog",
   description: "A personal technical blog",
-
+  lastUpdated: true,
 
   base: '/tech-blog/', // 必须改成你的仓库名
   
@@ -42,6 +42,22 @@ export default defineConfig({
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/chongtongTech/tech-blog' }
-    ]
+    ],
+
+    search: {
+      provider: 'local'
+    },
+    footer: {
+      // message: 'Released under the <a href="https://github.com/vuejs/vitepress/blob/main/LICENSE">MIT License</a>.',
+      copyright: 'Copyright © 2019-present <a href="https://github.com/chongtongTech">chongtongTech</a>'
+    },
+    lastUpdated: {
+      text: '最后更新于',
+      formatOptions: {
+        dateStyle: 'medium',
+        timeStyle: 'medium'
+      }
+    },
+
   }
 })
