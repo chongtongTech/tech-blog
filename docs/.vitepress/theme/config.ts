@@ -18,13 +18,17 @@ export const commentConfig: GiscusConfig = {
   lang: 'zh-CN'
 }
 
-// 预留：SEO 配置
-// export interface SEOConfig {
-//   // ...
-// }
+// 访问统计配置
+export interface AnalyticsConfig {
+  enabled: boolean
+  measurementId: string
+  debug?: boolean
+}
 
-// 预留：访问统计配置
-// export interface AnalyticsConfig {
-//   // ...
-// }
+// TODO: 将下面这些值替换为你的 Google Analytics 4 测量 ID
+export const analyticsConfig: AnalyticsConfig = {
+  enabled: true,
+  measurementId: 'G-25QN2G3V7P', // 替换为你的 GA4 测量 ID
+  debug: false
+}
 

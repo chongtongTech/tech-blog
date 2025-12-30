@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import { analyticsConfig } from './theme/config'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -13,6 +14,31 @@ export default defineConfig({
     hostname: 'https://chongtongtech.github.io/tech-blog/',
     lastmodDateOnly: false
   },
+
+  // Google Analytics
+  head: analyticsConfig.enabled && analyticsConfig.measurementId && analyticsConfig.measurementId.startsWith('G-')
+    ? [
+        [
+          'script',
+          {
+            async: '',
+            src: `https://www.googletagmanager.com/gtag/js?id=${analyticsConfig.measurementId}`
+          }
+        ],
+        [
+          'script',
+          {},
+          `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${analyticsConfig.measurementId}', {
+              send_page_view: false
+            });
+          `
+        ]
+      ]
+    : [],
 
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config

@@ -30,20 +30,6 @@ const { commentConfig, commentTheme, showComments } = useComment()
           :lang="commentConfig.lang"
           loading="lazy"
         />
-        <p
-          class="mt-3 text-[11px] leading-relaxed text-gray-400 dark:text-gray-500"
-        >
-          本文评论基于
-          <a
-            href="https://github.com/chongtongTech/tech-blog/discussions"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-[inherit] underline underline-offset-2 decoration-dotted font-normal"
-          >
-            GitHub Discussions
-          </a>
-          提供。
-        </p>
       </div>
     </ClientOnly>
   </section>
