@@ -8,6 +8,12 @@ export default defineConfig({
 
   base: '/tech-blog/', // 必须改成你的仓库名
   
+  // SEO
+  sitemap: {
+    hostname: 'https://chongtongtech.github.io/tech-blog/',
+    lastmodDateOnly: false
+  },
+
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -54,7 +60,7 @@ export default defineConfig({
     // 主页页脚
     footer: {
       // message: 'Released under the <a href="https://github.com/vuejs/vitepress/blob/main/LICENSE">MIT License</a>.',
-      copyright: 'Copyright © 2019-present <a href="https://github.com/chongtongTech">chongtongTech</a>'
+      copyright: `Copyright © 2019-${new Date().getFullYear()} <a href="https://github.com/chongtongTech">chongtongTech</a>`
     },
 
      // 文章页脚
